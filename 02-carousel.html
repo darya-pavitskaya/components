@@ -36,11 +36,11 @@
       }
 
       .carousel {
+        position: relative;
         display: flex;
         align-items: center;
         gap: 86px;
-        padding: 32px;
-        padding-left: 86px;
+        padding: 32px 48px 32px 86px;
         width: 800px;
         margin: 100px auto;
         background-color: #087f5b;
@@ -67,13 +67,64 @@
         font-size: 14px;
         color: #c3fae8;
       }
+
       .testimonial-job {
         font-size: 12px;
         color: #c3fae8;
       }
+
       .btn {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        border: none;
+        border-radius: 50%;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
       }
+
+      .btn--left {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .btn--right {
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+
       .btn-icon {
+        width: 24px;
+        height: 24px;
+        stroke: #087f5b;
+      }
+
+      .dots {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        display: flex;
+        gap: 12px;
+        transform: translate(-50%, 32px);
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .dot--fill {
+        background-color: #087f5b;
       }
     </style>
   </head>
@@ -83,14 +134,14 @@
       <blockquote class="testimonial">
         <p class="testimonial-text">
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-          asperiores quis fugit, nihil porro accusantium nobis possimus animi
-          aliquid architecto eveniet error totam, consequatur illo optio,
-          tenetur dolorem hic qui!"
+          asperiores quis fugit, nihil porro accusantium nobis aliquid
+          architecto eveniet error totam, consequatur illo optio, tenetur
+          dolorem hic qui!"
         </p>
         <p class="testimonial-author">Maria de Almeida</p>
         <p class="testimonial-job">Product Manager at EDP Comercial</p>
       </blockquote>
-      <button class="btn">
+      <button class="btn btn--left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -106,7 +157,7 @@
           />
         </svg>
       </button>
-      <button class="btn">
+      <button class="btn btn--right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -122,6 +173,12 @@
           />
         </svg>
       </button>
+      <div class="dots">
+        <button class="dot dot--fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
     </div>
   </body>
 </html>
